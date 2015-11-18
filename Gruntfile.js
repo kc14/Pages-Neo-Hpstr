@@ -59,6 +59,30 @@ module.exports = function(grunt) {
       dist: [
         'assets/js/scripts.min.js'
       ]
+    },
+
+    buildcontrol: {
+        options: {
+            dir: '_site',
+            commit: true,
+	        connectCommits: false,
+            push: true,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        },
+        pages: {
+            options: {
+                remote: 'https://github.com/kc14/pages.git', // change that
+                branch: 'gh-pages' // adjust here 'source' or 'gh-pages'
+            }
+        }
+    },
+    shell: {
+        jekyllServe: {
+            command: "jekyll serve  --no-watch"
+        },
+        jekyllBuild: {
+            command: "jekyll build"
+        }
     }
   });
 

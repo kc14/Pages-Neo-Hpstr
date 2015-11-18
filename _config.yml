@@ -7,6 +7,9 @@ words_per_minute: 150
 # When testing locally leave blank or use http://localhost:4000
 # url: http://kc14.GitHub.io
 url:              #
+baseurl:          #
+
+destination:      _site
 
 # Owner/author information
 owner:
