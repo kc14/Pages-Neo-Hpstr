@@ -60,7 +60,6 @@ module.exports = function(grunt) {
         'assets/js/scripts.min.js'
       ]
     },
-
     buildcontrol: {
         options: {
             dir: '_site',
