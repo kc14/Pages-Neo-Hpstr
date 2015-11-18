@@ -1,2 +1,0 @@
-# Pages
-My GitHub Pages
