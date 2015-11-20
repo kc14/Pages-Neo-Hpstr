@@ -70,8 +70,8 @@ module.exports = function(grunt) {
         },
         pages: {
             options: {
-                remote: 'https://github.com/kc14/pages.git', // change that
-                branch: 'gh-pages' // adjust here 'source' or 'gh-pages'
+                remote: 'https://github.com/kc14/Pages.git', // change that
+                branch: 'gh-pages' // adjust here, 'source' for user page and or 'gh-pages' for project pages
             }
         }
     },
@@ -92,6 +92,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-build-control');
 
   // Register tasks
   grunt.registerTask('default', [
@@ -103,5 +104,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'watch'
   ]);
-
+  grunt.registerTask('deploy', [
+    'buildcontrol:pages'
+  ]);
 };
